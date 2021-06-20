@@ -5,8 +5,8 @@ As Albert Einstein said:
 > Everything should be made as simple
 > as possible, but no simpler
 
-This is a program that performs a ACE (Arbitrary Code Execution) that transforms your soundgasm audio page.
-To make this work, simply include the CND loader in a script.
+This is a program that performs a ACE (Arbitrary Code Execution) attack that transforms your soundgasm audio page.
+To make this work, simply include the CDN loader in a script.
 
 ```html
 <script src="https://rawcdn.githack.com/kittysunedude/sgcl/4f1baa52f1cba16f354bef564b129b45335c15cf/loader.min.js"></script>
@@ -15,7 +15,7 @@ To make this work, simply include the CND loader in a script.
 It works thanks to the less-than-appropiate structure of the site. By no means should this be possible. Honestly, it is
 extremely barebones, it is very unnearving to see that this site has been like this for ages!
 
-Anyway, in theory, you can customize your own theme by adding a script (before the CND loader) with an object like this:
+Anyway, in theory, you can customize your own theme by adding a script (before the CDN loader) with an object like this:
 ```html
 <script>
 sgl_style = {

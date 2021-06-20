@@ -3,7 +3,7 @@
 **/
 
 // Codeloader
-(function () {
+document.body.onload = (function () {
   // avoid loading more than once
   if (window.SOUNDGASM_CODELOADER) throw new Error("Stopping script from being executed more than once.");
   window.SOUNDGASM_CODELOADER = true;
@@ -244,4 +244,4 @@
     wavesurfer.load(audio_url);
   });
   // end!
-})();
+});

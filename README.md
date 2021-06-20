@@ -12,7 +12,7 @@ To make this work, simply include the CND loader in a script.
 It works thanks to the less-than-appropiate structure of the site. By no means should this be possible. Honestly, it is
 extremely barebones, it is very unnearving to see that this site has been like this for ages!
 
-Anyway, in theory, you can customize your own theme by adding a script with an object like this:
+Anyway, in theory, you can customize your own theme by adding a script (before the CND loader) with an object like this:
 ```html
 <script>
 sgl_style = {

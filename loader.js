@@ -83,7 +83,31 @@ document.body.onload = (function () {
     return p.innerHTML;
   })();
   // get the audio URL
-  const audio_url = e('jp_audio_0').src.substring(27);
+  const audio_url = (() => {
+    // get the script HTML
+    const scripts = document.getElementsByTagName('script');
+    var found = null;
+    for(let i = 0; i < scripts.length; i++) {
+      let html = scripts[i].innerHTML;
+      if(html.trim() == '') continue;
+
+      // get the raw url
+      const first = html.indexOf('m4a: "') + 6;
+      if(first == -1) continue;
+      const second = html.indexOf('"', first);
+      if(second == -1) continue;
+      const maybe = html.substring(first, second).substring(27);
+      if(maybe.trim() == '') continue;
+
+      // i think we found it!
+      found = maybe;
+      break;
+    }
+
+    // validate found
+    if(found == null) throw new Error('Could not get the audio URL');
+    return found;
+  })();
 
   // default style
   if (window.sgl_style == null) {
@@ -104,29 +128,18 @@ document.body.onload = (function () {
   addStyle(/* custom style */
     `
     html, body, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: none; }
-
     html, body { background-color: ${style.background_color}; color: ${style.text_color}; }
-
     .title { margin: 15px; border-bottom: 2px ${style.main_color} solid; display: inline-block; color: ${style.text_color}; }
-
     .nav { margin-left: 25px; margin-top: 5px; margin-bottom: 20px; }
-
     .nav a { display: inline-block; margin: 5px; }
-
     .sg-cont { border: 2px ${style.main_color} solid; padding: 10px; border-radius: 20px }
-
     .sg-cont .player { padding: 15px; }
-
     .small-btn { padding: 5px !important; margin: 2px !important; }
-
     .slidecontainer { width: 100%; border: 2px white solid; }
-
     .descr { margin: auto; width: 60%; word-break: break-word; }
-
     .left { float: left; }
     .right { float: right; }
     .endlr { clear: both; }
-    
     .slider {
       -webkit-appearance: none;
       width: 100%;
@@ -135,7 +148,6 @@ document.body.onload = (function () {
       outline: none;
     }
     .slider:hover { opacity: 1; }
-    
     .slider::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
@@ -144,7 +156,6 @@ document.body.onload = (function () {
       background: ${style.main_color};
       cursor: pointer;
     }
-    
     .slider::-moz-range-thumb {
       width: 25px;
       height: 25px;

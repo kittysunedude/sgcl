@@ -8,6 +8,9 @@ As Albert Einstein said:
 This is a program that performs a ACE (Arbitrary Code Execution) that transforms your soundgasm audio page.
 To make this work, simply include the CND loader in a script.
 
+```html
+<script src="https://rawcdn.githack.com/kittysunedude/sgcl/4f1baa52f1cba16f354bef564b129b45335c15cf/loader.min.js"></script>
+```
 
 It works thanks to the less-than-appropiate structure of the site. By no means should this be possible. Honestly, it is
 extremely barebones, it is very unnearving to see that this site has been like this for ages!
@@ -26,3 +29,12 @@ sgl_style = {
 };
 </script>
 ```
+##See this with your own eyes.
+https://soundgasm.net/u/kittysunedude/SGCL-3-sec-sine-wave-test
+
+##Why should I use this?
+You should not. It's simply a test of why you should protect your webpage from attacks like this.
+It should get patched anyways, so don't expect this to work for long.
+
+##Contact
+u/kittysunedude on reddit and "Kittysune Dudemberg#5773" on discord.

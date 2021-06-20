@@ -163,7 +163,7 @@
   document.body.innerHTML = `
     <div>
       <h1 class="title left">Soundgasm</h1>
-      <div class="right" style="margin: 10px;"><a class="${btn_style}" href="#" target="_blank">What is this?!</a></div>
+      <div class="right" style="margin: 10px;"><a class="${btn_style}" href="https://github.com/kittysunedude/sgcl" target="_blank">What is this?!</a></div>
       <div class="endlr"></div>
       <div class="nav">
         <a class="${btn_style}" href="https://soundgasm.net/">Home</a>

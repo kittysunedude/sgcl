@@ -29,12 +29,12 @@ sgl_style = {
 };
 </script>
 ```
-##See this with your own eyes.
+## See this with your own eyes.
 https://soundgasm.net/u/kittysunedude/SGCL-3-sec-sine-wave-test
 
-##Why should I use this?
+## Why should I use this?
 You should not. It's simply a test of why you should protect your webpage from attacks like this.
 It should get patched anyways, so don't expect this to work for long.
 
-##Contact
+## Contact
 u/kittysunedude on reddit and "Kittysune Dudemberg#5773" on discord.

@@ -8,9 +8,6 @@ document.body.onload = (function () {
   if (window.SOUNDGASM_CODELOADER) throw new Error("Stopping script from being executed more than once.");
   window.SOUNDGASM_CODELOADER = true;
 
-  // you will not be missed
-  window.$ = undefined;
-
   // constants
   const url = location.href.split('/');
   const audio = url.length > 5;
